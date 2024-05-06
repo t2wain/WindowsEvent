@@ -1,0 +1,5 @@
+﻿wevtutil epl Application "C:\temp\outlooklog.evtx" /q:"*[System[Provider[@Name='Outlook'] and (Level=4 or Level=0) and TimeCreated[timediff(@SystemTime) <= 2592000000]]]"
+
+wevtutil epl Application "C:\temp\outlooklog.evtx" /q:"*[System [Provider/@Name='Outlook'] [EventRecordID > 1184447] [Level = 4]]"
+
+wevtutil epl Application "C:\temp\outlooklog.evtx" /q:"*[System[Provider[@Name='Outlook'] and (Level=4 or Level=0)]]"
